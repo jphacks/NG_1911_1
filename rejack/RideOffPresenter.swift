@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+class RideOffPresenter {
+    let apiModel: ApiModel
+    
+    weak var view: RideOffViewInterface?
+    
+    init(with view: RideOffViewInterface) {
+        self.view = view
+        self.apiModel = ApiModel()
+        
+        apiModel.delegate = self
+    }
+}
+
+extension RideOffPresenter: ApiModelDelegate {
+    func didGetApi() {
+        
+    }
+}

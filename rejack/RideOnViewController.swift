@@ -8,23 +8,17 @@
 
 import UIKit
 
-class RideOnViewController: UIViewController {
+protocol RideOnViewInterface: class {
+    
+}
+
+class RideOnViewController: UIViewController, RideOnViewInterface {
+    var presenter: RideOnPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        presenter = RideOnPresenter(with: view as! RideOnViewInterface)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

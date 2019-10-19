@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0013D65534E50A3F1BBC4D0E /* Pods_rejackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0ADF5A928C73EFD803535F5 /* Pods_rejackTests.framework */; };
 		162D2C8B2359E7DB00183E24 /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162075CF2358BC9D003D7316 /* CoreNFC.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		164A9261235AD3080002901E /* RideOn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A9260235AD3080002901E /* RideOn.storyboard */; };
-		164A9263235AD3120002901E /* RideOff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A9262235AD3120002901E /* RideOff.storyboard */; };
 		164A9265235AD3310002901E /* RideOnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A9264235AD3310002901E /* RideOnViewController.swift */; };
 		164A9267235AD33E0002901E /* RideOffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A9266235AD33E0002901E /* RideOffViewController.swift */; };
 		164A9269235AD5700002901E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A9268235AD5700002901E /* HomePresenter.swift */; };
@@ -49,8 +47,6 @@
 /* Begin PBXFileReference section */
 		162075CD2358BC8E003D7316 /* rejack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rejack.entitlements; sourceTree = "<group>"; };
 		162075CF2358BC9D003D7316 /* CoreNFC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreNFC.framework; path = System/Library/Frameworks/CoreNFC.framework; sourceTree = SDKROOT; };
-		164A9260235AD3080002901E /* RideOn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RideOn.storyboard; sourceTree = "<group>"; };
-		164A9262235AD3120002901E /* RideOff.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RideOff.storyboard; sourceTree = "<group>"; };
 		164A9264235AD3310002901E /* RideOnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideOnViewController.swift; sourceTree = "<group>"; };
 		164A9266235AD33E0002901E /* RideOffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideOffViewController.swift; sourceTree = "<group>"; };
 		164A9268235AD5700002901E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -158,8 +154,6 @@
 				164A926C235AD5860002901E /* RideOffPresenter.swift */,
 				164A9266235AD33E0002901E /* RideOffViewController.swift */,
 				16796D702358BB2000EAAFFE /* Main.storyboard */,
-				164A9260235AD3080002901E /* RideOn.storyboard */,
-				164A9262235AD3120002901E /* RideOff.storyboard */,
 				16796D732358BB2100EAAFFE /* Assets.xcassets */,
 				16796D752358BB2100EAAFFE /* LaunchScreen.storyboard */,
 				16796D782358BB2100EAAFFE /* Info.plist */,
@@ -315,10 +309,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				16796D772358BB2100EAAFFE /* LaunchScreen.storyboard in Resources */,
-				164A9261235AD3080002901E /* RideOn.storyboard in Resources */,
 				16796D742358BB2100EAAFFE /* Assets.xcassets in Resources */,
 				16796D722358BB2000EAAFFE /* Main.storyboard in Resources */,
-				164A9263235AD3120002901E /* RideOff.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
