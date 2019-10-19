@@ -35,8 +35,8 @@
 		C505E32B235B1EF200CB61DF /* running@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C505E327235B1EF200CB61DF /* running@2x.png */; };
 		C505E32C235B1EF200CB61DF /* stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C505E328235B1EF200CB61DF /* stop@2x.png */; };
 		C505E32D235B1EF200CB61DF /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = C505E329235B1EF200CB61DF /* stop.png */; };
-		C505E330235B22DF00CB61DF /* btn-fin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C505E32E235B22DF00CB61DF /* btn-fin@2x.png */; };
-		C505E331235B22DF00CB61DF /* btn-fin.png in Resources */ = {isa = PBXBuildFile; fileRef = C505E32F235B22DF00CB61DF /* btn-fin.png */; };
+		C505E338235B681800CB61DF /* btn-fin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C505E336235B681800CB61DF /* btn-fin@2x.png */; };
+		C505E339235B681800CB61DF /* btn-fin.png in Resources */ = {isa = PBXBuildFile; fileRef = C505E337235B681800CB61DF /* btn-fin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,8 +95,8 @@
 		C505E327235B1EF200CB61DF /* running@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "running@2x.png"; sourceTree = "<group>"; };
 		C505E328235B1EF200CB61DF /* stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stop@2x.png"; sourceTree = "<group>"; };
 		C505E329235B1EF200CB61DF /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
-		C505E32E235B22DF00CB61DF /* btn-fin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-fin@2x.png"; sourceTree = "<group>"; };
-		C505E32F235B22DF00CB61DF /* btn-fin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-fin.png"; sourceTree = "<group>"; };
+		C505E336235B681800CB61DF /* btn-fin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-fin@2x.png"; sourceTree = "<group>"; };
+		C505E337235B681800CB61DF /* btn-fin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-fin.png"; sourceTree = "<group>"; };
 		F0ADF5A928C73EFD803535F5 /* Pods_rejackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rejackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F210CF381321713F599A946C /* Pods-rejackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rejackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rejackTests/Pods-rejackTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F2F133B00BADA405D4868CBB /* Pods-rejackUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rejackUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rejackUITests/Pods-rejackUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,13 +178,13 @@
 				164A926C235AD5860002901E /* RideOffPresenter.swift */,
 				164A9266235AD33E0002901E /* RideOffViewController.swift */,
 				16796D702358BB2000EAAFFE /* Main.storyboard */,
-				C505E32F235B22DF00CB61DF /* btn-fin.png */,
-				C505E32E235B22DF00CB61DF /* btn-fin@2x.png */,
 				C505E326235B1EF100CB61DF /* running.png */,
 				C505E327235B1EF200CB61DF /* running@2x.png */,
 				C505E329235B1EF200CB61DF /* stop.png */,
 				C505E328235B1EF200CB61DF /* stop@2x.png */,
 				16796D732358BB2100EAAFFE /* Assets.xcassets */,
+				C505E337235B681800CB61DF /* btn-fin.png */,
+				C505E336235B681800CB61DF /* btn-fin@2x.png */,
 				C505E2E6235AF2E100CB61DF /* unlock.png */,
 				C505E2E7235AF2E100CB61DF /* unlock@2x.png */,
 				C505E2DE235AF1F300CB61DF /* btn-scan@2x.png */,
@@ -347,14 +347,14 @@
 				16796D772358BB2100EAAFFE /* LaunchScreen.storyboard in Resources */,
 				C505E2E8235AF2E100CB61DF /* unlock.png in Resources */,
 				C505E32C235B1EF200CB61DF /* stop@2x.png in Resources */,
-				C505E330235B22DF00CB61DF /* btn-fin@2x.png in Resources */,
+				C505E338235B681800CB61DF /* btn-fin@2x.png in Resources */,
 				C505E2E9235AF2E100CB61DF /* unlock@2x.png in Resources */,
 				C505E2E5235AF2AD00CB61DF /* logo-w@2x.png in Resources */,
 				C505E2DD235AF19B00CB61DF /* btn-scan.png in Resources */,
 				C505E32A235B1EF200CB61DF /* running.png in Resources */,
 				C505E32B235B1EF200CB61DF /* running@2x.png in Resources */,
 				C505E2E3235AF28E00CB61DF /* logo-w.png in Resources */,
-				C505E331235B22DF00CB61DF /* btn-fin.png in Resources */,
+				C505E339235B681800CB61DF /* btn-fin.png in Resources */,
 				16796D742358BB2100EAAFFE /* Assets.xcassets in Resources */,
 				C505E32D235B1EF200CB61DF /* stop.png in Resources */,
 				C505E2DF235AF1F300CB61DF /* btn-scan@2x.png in Resources */,

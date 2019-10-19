@@ -118,8 +118,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UY-hF-iXh">
-                                <rect key="frame" x="39.5" y="459" width="296" height="98"/>
-                                <state key="normal" image="btn-fin.png"/>
+                                <rect key="frame" x="39" y="459" width="296" height="98"/>
+                                <state key="normal" image="btn-fin-1"/>
                                 <connections>
                                     <action selector="rideOff" destination="xlr-bh-sDd" eventType="touchUpInside" id="bdL-5l-Ibp"/>
                                 </connections>
@@ -135,10 +135,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dao-pM-hVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1762" y="133"/>
+            <point key="canvasLocation" x="1760.8" y="132.68365817091455"/>
         </scene>
     </scenes>
     <resources>
+        <image name="btn-fin-1" width="296" height="98"/>
+        <image name="btn-scan" width="148" height="49"/>
         <image name="btn-scan-1" width="296" height="98"/>
         <image name="unlock.png" width="262" height="218.5"/>
     </resources>
