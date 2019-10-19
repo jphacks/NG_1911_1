@@ -67,6 +67,7 @@ class HomeViewController: UIViewController, HomeViewInterface, NFCNDEFReaderSess
     
     @IBAction func readNFC(_ sender: UIButton) {
         //Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(HomeViewController.timerUpdate), userInfo: nil, repeats: true)
+        self.unlockKey()
         guard NFCNDEFReaderSession.readingAvailable else {
             let alertController = UIAlertController(
                 title: "スキャンできません",
