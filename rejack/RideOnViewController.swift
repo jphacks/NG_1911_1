@@ -8,28 +8,53 @@
 
 import UIKit
 import CoreMotion
+import CoreLocation
 
 protocol RideOnViewInterface: class {
-    
+    func toRideOff()
 }
 
-class RideOnViewController: UIViewController, RideOnViewInterface {
+class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationManagerDelegate {
+    @IBOutlet var rideOffBtn: UIButton!
+    
+    var locationMg: CLLocationManager!
     var presenter: RideOnPresenter!
-    var motionMg: CMMotionManager!
-
+    
+    var pre_lat = 0.0
+    var pre_lon = 0.0
+    var loc_counter = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = RideOnPresenter(with: view as! RideOnViewInterface)
+        self.rideOffBtn.alpha = 0
         
-        motionMg.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: {(data, error) in
-            print(data?.acceleration.x as Any)
-            print(data?.acceleration.y as Any)
-            print(data?.acceleration.z as Any)
-            if (Int((data?.acceleration.x)!) < 1 && Int((data?.acceleration.y)!) < 1) {
-                self.showButton()
-            }
-        })
+        //presenter = RideOnPresenter(with: view as! RideOnViewInterface)
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationMg = CLLocationManager()
+            locationMg.delegate = self as CLLocationManagerDelegate
+            locationMg.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            locationMg.requestWhenInUseAuthorization()
+        case .restricted, .denied:
+            break
+        case .authorizedAlways, .authorizedWhenInUse:
+            break
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        for location in locations {
+            print("緯度:\(location.coordinate.latitude) 経度:\(location.coordinate.longitude)")
+        }
+        
+        
     }
     
     func startAlert() {
@@ -41,11 +66,11 @@ class RideOnViewController: UIViewController, RideOnViewInterface {
     }
     
     func showButton() {
+        self.rideOffBtn.alpha = 1
+    }
+    
+    func toRideOff() {
         
     }
     
-    @IBAction func rideOff() {
-        //画面遷移
-        
-    }
 }

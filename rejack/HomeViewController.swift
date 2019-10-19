@@ -25,7 +25,7 @@ class HomeViewController: UIViewController, HomeViewInterface, NFCNDEFReaderSess
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        presenter = HomePresenter(with: self as! HomeViewInterface)
+        presenter = HomePresenter(with: self)
 
         presenter?.test()
     }
@@ -44,6 +44,7 @@ class HomeViewController: UIViewController, HomeViewInterface, NFCNDEFReaderSess
     
     func toRideView() {
         print("toRide")
+        self.performSegue(withIdentifier: "rideOn", sender: nil)
     }
     
 //    @objc func timerUpdate() {

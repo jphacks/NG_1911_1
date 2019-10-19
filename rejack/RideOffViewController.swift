@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 protocol RideOffViewInterface: class {
     
@@ -14,15 +16,26 @@ protocol RideOffViewInterface: class {
 
 class RideOffViewController: UIViewController, RideOffViewInterface {
     var presenter: RideOffPresenter!
+    var url = ApiUrl.shared.baseUrl
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = RideOffPresenter(with: view as! RideOffViewInterface)
+        //presenter = RideOffPresenter(with: view as! RideOffViewInterface)
     }
     
     func lockKey() {
         presenter.lockLey()
+    }
+    
+    @IBAction func rideOff() {
+        //self.lockKey()
+        Alamofire.request(url + "/api/key/close", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+            guard let data = response.data else {
+                return
+            }
+            print(data)
+        }
     }
 
 }

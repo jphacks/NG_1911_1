@@ -44,11 +44,12 @@ class ApiModel {
     }
     
     func unlockKey() {
-        Alamofire.request(url + "/api?key?open", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+        Alamofire.request(url + "/api/key/open", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
             guard let data = response.data else {
                 return
             }
             print(data)
+            self.delegate?.didKeyOpen()
         }
     }
     

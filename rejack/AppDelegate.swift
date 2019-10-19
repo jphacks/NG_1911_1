@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 class ApiUrl {
-    var baseUrl: String = "http://ec2-13-114-103-68.ap-northeast-1.compute.amazonaws.com"
+    var baseUrl: String = "http://ec2-13-114-103-68.ap-northeast-1.compute.amazonaws.coma"
     static let shared = ApiUrl()
     
     private init() {}
