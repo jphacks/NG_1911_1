@@ -139,8 +139,6 @@
         </scene>
     </scenes>
     <resources>
-<<<<<<< HEAD
->>>>>>> 4121e9ffb3ed58932c78ccb446bcd663e4238761
         <image name="btn-scan-1" width="296" height="98"/>
         <image name="unlock.png" width="262" height="218.5"/>
     </resources>
