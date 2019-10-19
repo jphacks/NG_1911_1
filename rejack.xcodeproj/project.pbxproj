@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		162D2C8B2359E7DB00183E24 /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162075CF2358BC9D003D7316 /* CoreNFC.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		16796D6D2358BB2000EAAFFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16796D6C2358BB2000EAAFFE /* AppDelegate.swift */; };
 		16796D6F2358BB2000EAAFFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16796D6E2358BB2000EAAFFE /* ViewController.swift */; };
 		16796D722358BB2000EAAFFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16796D702358BB2000EAAFFE /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		162075CD2358BC8E003D7316 /* rejack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rejack.entitlements; sourceTree = "<group>"; };
+		162075CF2358BC9D003D7316 /* CoreNFC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreNFC.framework; path = System/Library/Frameworks/CoreNFC.framework; sourceTree = SDKROOT; };
 		16796D692358BB2000EAAFFE /* rejack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rejack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16796D6C2358BB2000EAAFFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16796D6E2358BB2000EAAFFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				162D2C8B2359E7DB00183E24 /* CoreNFC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		162075CE2358BC9D003D7316 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				162075CF2358BC9D003D7316 /* CoreNFC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		16796D602358BB2000EAAFFE = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +93,7 @@
 				16796D802358BB2100EAAFFE /* rejackTests */,
 				16796D8B2358BB2100EAAFFE /* rejackUITests */,
 				16796D6A2358BB2000EAAFFE /* Products */,
+				162075CE2358BC9D003D7316 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +110,7 @@
 		16796D6B2358BB2000EAAFFE /* rejack */ = {
 			isa = PBXGroup;
 			children = (
+				162075CD2358BC8E003D7316 /* rejack.entitlements */,
 				16796D6C2358BB2000EAAFFE /* AppDelegate.swift */,
 				16796D6E2358BB2000EAAFFE /* ViewController.swift */,
 				16796D702358BB2000EAAFFE /* Main.storyboard */,
@@ -193,6 +207,14 @@
 				TargetAttributes = {
 					16796D682358BB2000EAAFFE = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					16796D7C2358BB2100EAAFFE = {
 						CreatedOnToolsVersion = 10.1;
@@ -432,7 +454,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = rejack/rejack.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development: Yuuma Sakata (SM5S5L6NY5)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = FUYNSQ2NQ6;
 				INFOPLIST_FILE = rejack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -440,6 +465,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tmy.jack.rejack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "JPHacks2019 team Saji Development";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -449,7 +475,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = rejack/rejack.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yuuma Sakata (FUYNSQ2NQ6)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = FUYNSQ2NQ6;
 				INFOPLIST_FILE = rejack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +486,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tmy.jack.rejack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = rejack;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
