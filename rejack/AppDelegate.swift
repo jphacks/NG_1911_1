@@ -41,6 +41,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+}
 
+class ApiUrl {
+    var baseUrl: String = "http://ec2-13-114-103-68.ap-northeast-1.compute.amazonaws.com"
+    static let shared = ApiUrl()
+    
+    private init() {}
 }
 

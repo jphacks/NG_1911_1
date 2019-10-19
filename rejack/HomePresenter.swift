@@ -7,3 +7,34 @@
 //
 
 import Foundation
+
+class HomePresenter {
+    let apiModel: ApiModel
+    
+    weak var view: HomeViewInterface?
+    
+    init(with view: HomeViewInterface) {
+        self.view = view
+        self.apiModel = ApiModel()
+        
+        apiModel.delegate = self
+    }
+    
+    func test() {
+        apiModel.test()
+    }
+    
+    func unlockKey() {
+        
+    }
+    
+    func toRideView() {
+        
+    }
+}
+
+extension HomePresenter: ApiModelDelegate {
+    func didGetApi() {
+        print("good!")
+    }
+}

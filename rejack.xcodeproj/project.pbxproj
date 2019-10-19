@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0013D65534E50A3F1BBC4D0E /* Pods_rejackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0ADF5A928C73EFD803535F5 /* Pods_rejackTests.framework */; };
 		162D2C8B2359E7DB00183E24 /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162075CF2358BC9D003D7316 /* CoreNFC.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		164A9261235AD3080002901E /* RideOn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A9260235AD3080002901E /* RideOn.storyboard */; };
 		164A9263235AD3120002901E /* RideOff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 164A9262235AD3120002901E /* RideOff.storyboard */; };
@@ -24,6 +25,8 @@
 		16796D772358BB2100EAAFFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16796D752358BB2100EAAFFE /* LaunchScreen.storyboard */; };
 		16796D822358BB2100EAAFFE /* rejackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16796D812358BB2100EAAFFE /* rejackTests.swift */; };
 		16796D8D2358BB2100EAAFFE /* rejackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16796D8C2358BB2100EAAFFE /* rejackUITests.swift */; };
+		4D7509E309E8787E129EFFC0 /* Pods_rejack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BABB8622DD869E9FF43807 /* Pods_rejack.framework */; };
+		55AF5A901C2916E7D85B3B04 /* Pods_rejackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B9332E6A473F7379949942 /* Pods_rejackUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,15 @@
 		16796D882358BB2100EAAFFE /* rejackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rejackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16796D8C2358BB2100EAAFFE /* rejackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rejackUITests.swift; sourceTree = "<group>"; };
 		16796D8E2358BB2100EAAFFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		218547299DE32A70C1ED2774 /* Pods-rejackUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rejackUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rejackUITests/Pods-rejackUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3BE095DEA58EE1861F78D112 /* Pods-rejackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rejackTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rejackTests/Pods-rejackTests.release.xcconfig"; sourceTree = "<group>"; };
+		50B9332E6A473F7379949942 /* Pods_rejackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rejackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EA454EEECD3AA54093548F6 /* Pods-rejack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rejack.release.xcconfig"; path = "Pods/Target Support Files/Pods-rejack/Pods-rejack.release.xcconfig"; sourceTree = "<group>"; };
+		69BABB8622DD869E9FF43807 /* Pods_rejack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rejack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E4B1BFB831CDD9EE7D7C033 /* Pods-rejack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rejack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rejack/Pods-rejack.debug.xcconfig"; sourceTree = "<group>"; };
+		F0ADF5A928C73EFD803535F5 /* Pods_rejackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rejackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F210CF381321713F599A946C /* Pods-rejackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rejackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rejackTests/Pods-rejackTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2F133B00BADA405D4868CBB /* Pods-rejackUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rejackUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rejackUITests/Pods-rejackUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				162D2C8B2359E7DB00183E24 /* CoreNFC.framework in Frameworks */,
+				4D7509E309E8787E129EFFC0 /* Pods_rejack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0013D65534E50A3F1BBC4D0E /* Pods_rejackTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55AF5A901C2916E7D85B3B04 /* Pods_rejackUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				162075CF2358BC9D003D7316 /* CoreNFC.framework */,
+				69BABB8622DD869E9FF43807 /* Pods_rejack.framework */,
+				F0ADF5A928C73EFD803535F5 /* Pods_rejackTests.framework */,
+				50B9332E6A473F7379949942 /* Pods_rejackUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,6 +130,7 @@
 				16796D8B2358BB2100EAAFFE /* rejackUITests */,
 				16796D6A2358BB2000EAAFFE /* Products */,
 				162075CE2358BC9D003D7316 /* Frameworks */,
+				FF294661B2E52B705B0D1F14 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,12 +151,12 @@
 				16796D6C2358BB2000EAAFFE /* AppDelegate.swift */,
 				16796D6E2358BB2000EAAFFE /* ViewController.swift */,
 				164A9270235AD5AB0002901E /* ApiModel.swift */,
-				164A926E235AD5910002901E /* HomeViewController.swift */,
-				164A9264235AD3310002901E /* RideOnViewController.swift */,
-				164A9266235AD33E0002901E /* RideOffViewController.swift */,
 				164A9268235AD5700002901E /* HomePresenter.swift */,
+				164A926E235AD5910002901E /* HomeViewController.swift */,
 				164A926A235AD57D0002901E /* RideOnPresenter.swift */,
+				164A9264235AD3310002901E /* RideOnViewController.swift */,
 				164A926C235AD5860002901E /* RideOffPresenter.swift */,
+				164A9266235AD33E0002901E /* RideOffViewController.swift */,
 				16796D702358BB2000EAAFFE /* Main.storyboard */,
 				164A9260235AD3080002901E /* RideOn.storyboard */,
 				164A9262235AD3120002901E /* RideOff.storyboard */,
@@ -166,6 +185,19 @@
 			path = rejackUITests;
 			sourceTree = "<group>";
 		};
+		FF294661B2E52B705B0D1F14 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E4B1BFB831CDD9EE7D7C033 /* Pods-rejack.debug.xcconfig */,
+				5EA454EEECD3AA54093548F6 /* Pods-rejack.release.xcconfig */,
+				F210CF381321713F599A946C /* Pods-rejackTests.debug.xcconfig */,
+				3BE095DEA58EE1861F78D112 /* Pods-rejackTests.release.xcconfig */,
+				F2F133B00BADA405D4868CBB /* Pods-rejackUITests.debug.xcconfig */,
+				218547299DE32A70C1ED2774 /* Pods-rejackUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,9 +205,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16796D912358BB2100EAAFFE /* Build configuration list for PBXNativeTarget "rejack" */;
 			buildPhases = (
+				019F21C5178E94DD68C36281 /* [CP] Check Pods Manifest.lock */,
 				16796D652358BB2000EAAFFE /* Sources */,
 				16796D662358BB2000EAAFFE /* Frameworks */,
 				16796D672358BB2000EAAFFE /* Resources */,
+				65D8ACFACF5110F4D04B328C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16796D942358BB2100EAAFFE /* Build configuration list for PBXNativeTarget "rejackTests" */;
 			buildPhases = (
+				85DCC8E5CDD184EEBFD45287 /* [CP] Check Pods Manifest.lock */,
 				16796D792358BB2100EAAFFE /* Sources */,
 				16796D7A2358BB2100EAAFFE /* Frameworks */,
 				16796D7B2358BB2100EAAFFE /* Resources */,
@@ -208,6 +243,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 16796D972358BB2100EAAFFE /* Build configuration list for PBXNativeTarget "rejackUITests" */;
 			buildPhases = (
+				A18B4AA5664665172CC3E630 /* [CP] Check Pods Manifest.lock */,
 				16796D842358BB2100EAAFFE /* Sources */,
 				16796D852358BB2100EAAFFE /* Frameworks */,
 				16796D862358BB2100EAAFFE /* Resources */,
@@ -301,6 +337,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		019F21C5178E94DD68C36281 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rejack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65D8ACFACF5110F4D04B328C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-rejack/Pods-rejack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-rejack/Pods-rejack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85DCC8E5CDD184EEBFD45287 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rejackTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A18B4AA5664665172CC3E630 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-rejackUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		16796D652358BB2000EAAFFE /* Sources */ = {
@@ -488,6 +617,7 @@
 		};
 		16796D922358BB2100EAAFFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E4B1BFB831CDD9EE7D7C033 /* Pods-rejack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = rejack/rejack.entitlements;
@@ -509,6 +639,7 @@
 		};
 		16796D932358BB2100EAAFFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EA454EEECD3AA54093548F6 /* Pods-rejack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = rejack/rejack.entitlements;
@@ -530,6 +661,7 @@
 		};
 		16796D952358BB2100EAAFFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F210CF381321713F599A946C /* Pods-rejackTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -550,6 +682,7 @@
 		};
 		16796D962358BB2100EAAFFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BE095DEA58EE1861F78D112 /* Pods-rejackTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -570,6 +703,7 @@
 		};
 		16796D982358BB2100EAAFFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2F133B00BADA405D4868CBB /* Pods-rejackUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -589,6 +723,7 @@
 		};
 		16796D992358BB2100EAAFFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 218547299DE32A70C1ED2774 /* Pods-rejackUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

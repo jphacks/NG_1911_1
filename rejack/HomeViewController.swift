@@ -7,24 +7,59 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
+import CoreNFC
 
-class HomeViewController: UIViewController {
+protocol HomeViewInterface: class {
+    
+}
+
+class HomeViewController: UIViewController, HomeViewInterface, NFCNDEFReaderSessionDelegate {
+    var presenter: HomePresenter!
+    var url = ApiUrl.shared.baseUrl
+    
+    var session: NFCNDEFReaderSession?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        presenter = HomePresenter(with: self as! HomeViewInterface)
+
+        presenter?.test()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
+        
     }
-    */
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+        self.unlockKey()
+    }
+    
+    func unlockKey() {
+        self.unlockKey()
+    }
+    
+    func toRideView() {
+        
+    }
+    
+    @IBAction func readNFC(_ sender: UIButton) {
+        guard NFCNDEFReaderSession.readingAvailable else {
+            let alertController = UIAlertController(
+                title: "スキャンできません",
+                message: "このデバイスやと無理ですよ",
+                preferredStyle: .alert
+            )
+            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
+        session?.alertMessage = "カードを近づけてーー"
+        session?.begin()
+    }
 
 }

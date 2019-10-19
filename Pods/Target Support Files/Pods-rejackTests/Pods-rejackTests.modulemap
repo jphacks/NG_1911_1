@@ -1,0 +1,6 @@
+framework module Pods_rejackTests {
+  umbrella header "Pods-rejackTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
