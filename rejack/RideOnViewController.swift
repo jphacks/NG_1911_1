@@ -16,6 +16,7 @@ protocol RideOnViewInterface: class {
 
 class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationManagerDelegate {
     @IBOutlet var rideOffBtn: UIButton!
+    @IBOutlet var warningImageView: UIImageView!
     
     var locationMg: CLLocationManager!
     var presenter: RideOnPresenter!
@@ -28,6 +29,7 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
         super.viewDidLoad()
         
         self.rideOffBtn.isEnabled = false
+        self.warningImageView.alpha = 0
         
         //presenter = RideOnPresenter(with: view as! RideOnViewInterface)
         
@@ -55,17 +57,24 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
         let lat = location.coordinate.latitude
         let lon = location.coordinate.longitude
         
-        print("lat: ", lat)
-        print("lon: ", lon)
-        print("pre_lat", pre_lat)
-        print("pre_lon", pre_lon)
+//        print("lat: ", lat)
+//        print("lon: ", lon)
+//        print("pre_lat", pre_lat)
+//        print("pre_lon", pre_lon)
         
-        if round(lat*100)/100 == round(pre_lat*100)/100 && round(lon*100)/100 == round(pre_lon*100)/100 {
+        if round(lat*10000000000)/10000000000 == round(pre_lat*10000000000)/10000000000
+            && round(lon*10000000000)/10000000000 == round(pre_lon*10000000000)/10000000000 {
             loc_counter += 1
             print(loc_counter)
             if loc_counter > 5 {
                 self.showButton()
-                self.locationMg.stopUpdatingLocation()
+                //self.locationMg.stopUpdatingLocation()
+            }
+        } else {
+            loc_counter -= 1
+            print(loc_counter)
+            if loc_counter <= 5 {
+                self.hideButton()
             }
         }
         
@@ -83,6 +92,10 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
     
     func showButton() {
         self.rideOffBtn.isEnabled = true
+    }
+    
+    func hideButton() {
+        self.rideOffBtn.isEnabled = false
     }
     
 }

@@ -78,7 +78,7 @@
         <!--Ride On View Controller-->
         <scene sceneID="Yw0-ws-qHI">
             <objects>
-                <viewController id="r0u-Sl-Ydd" customClass="RideOnViewController" customModule="rejack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rideon" id="r0u-Sl-Ydd" customClass="RideOnViewController" customModule="rejack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rFK-Zx-i70">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,12 +91,17 @@
                                     <segue destination="xlr-bh-sDd" kind="show" id="Khb-6M-0RW"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn-scan" translatesAutoresizingMaskIntoConstraints="NO" id="V8I-tK-tuT">
+                                <rect key="frame" x="67" y="126" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="o1S-Ti-13j"/>
                     </view>
                     <connections>
                         <outlet property="rideOffBtn" destination="Nex-Fn-u1y" id="2Hq-Kc-7At"/>
+                        <outlet property="warningImageView" destination="V8I-tK-tuT" id="rgL-gS-i4Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDo-AI-59M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -130,6 +135,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn-scan" width="148" height="49"/>
         <image name="btn-scan-1" width="296" height="98"/>
         <image name="unlock.png" width="262" height="218"/>
     </resources>

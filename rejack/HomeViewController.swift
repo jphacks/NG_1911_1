@@ -47,24 +47,6 @@ class HomeViewController: UIViewController, HomeViewInterface, NFCNDEFReaderSess
         self.performSegue(withIdentifier: "rideOn", sender: nil)
     }
     
-//    @objc func timerUpdate() {
-//        print("update")
-//        guard NFCNDEFReaderSession.readingAvailable else {
-//        let alertController = UIAlertController(
-//                title: "スキャンできません",
-//                message: "このデバイスやと無理ですよ",
-//                preferredStyle: .alert
-//            )
-//            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//            self.present(alertController, animated: true, completion: nil)
-//            return
-//        }
-//
-//        session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
-//        session?.alertMessage = "カードを近づけてーー"
-//        session?.begin()
-//    }
-    
     @IBAction func readNFC(_ sender: UIButton) {
         //Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(HomeViewController.timerUpdate), userInfo: nil, repeats: true)
         self.unlockKey()

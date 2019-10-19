@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var isAgain: Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -27,6 +29,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        Alamofire.request(ApiUrl.shared.baseUrl + "/api/alert/start", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+            guard let data = response.data else {
+                return
+            }
+            self.isAgain = true
+            print(data)
+        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -35,6 +45,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        if self.isAgain {
+            Alamofire.request(ApiUrl.shared.baseUrl + "/api/alert/stop", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+                guard let data = response.data else {
+                    return
+                }
+                self.isAgain = false
+                print(data)
+            }
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
