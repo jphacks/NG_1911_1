@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,14 +37,14 @@
 </string>
                                         <attributes>
                                             <color key="NSColor" red="0.32549019610000002" green="0.76470588240000004" blue="0.74509803919999995" alpha="1" colorSpace="deviceRGB"/>
-                                            <font key="NSFont" size="18" name="HiraginoSans-W7"/>
+                                            <font key="NSFont" size="22" name="HiraginoSans-W7"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="開錠できます">
                                         <attributes>
                                             <color key="NSColor" red="0.32549019610000002" green="0.76470588240000004" blue="0.74509803919999995" alpha="1" colorSpace="deviceRGB"/>
-                                            <font key="NSFont" size="18" name="HiraginoSans-W7"/>
+                                            <font key="NSFont" size="22" name="HiraginoSans-W7"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="14" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -80,13 +78,12 @@
             <objects>
                 <viewController storyboardIdentifier="rideon" id="r0u-Sl-Ydd" customClass="RideOnViewController" customModule="rejack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rFK-Zx-i70">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nex-Fn-u1y">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nex-Fn-u1y">
+                                <rect key="frame" x="39.5" y="459" width="296" height="98"/>
+                                <state key="normal" image="btn-scan-1"/>
                                 <connections>
                                     <segue destination="xlr-bh-sDd" kind="show" id="Khb-6M-0RW"/>
                                 </connections>
@@ -97,6 +94,10 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="o1S-Ti-13j" firstAttribute="bottom" secondItem="Nex-Fn-u1y" secondAttribute="bottom" constant="90" id="YTf-gK-1qG"/>
+                            <constraint firstItem="Nex-Fn-u1y" firstAttribute="centerX" secondItem="rFK-Zx-i70" secondAttribute="centerX" id="lMd-yI-i4b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="o1S-Ti-13j"/>
                     </view>
                     <connections>
@@ -106,26 +107,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDo-AI-59M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="133"/>
+            <point key="canvasLocation" x="940" y="132.68365817091455"/>
         </scene>
         <!--Ride Off View Controller-->
         <scene sceneID="j4d-xC-h4T">
             <objects>
                 <viewController id="xlr-bh-sDd" customClass="RideOffViewController" customModule="rejack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y0d-Lj-vOA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UY-hF-iXh">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UY-hF-iXh">
+                                <rect key="frame" x="39.5" y="459" width="296" height="98"/>
+                                <state key="normal" image="btn-fin.png"/>
                                 <connections>
                                     <action selector="rideOff" destination="xlr-bh-sDd" eventType="touchUpInside" id="bdL-5l-Ibp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rSh-bf-7ob" firstAttribute="bottom" secondItem="6UY-hF-iXh" secondAttribute="bottom" constant="90" id="fcR-bB-pyY"/>
+                            <constraint firstItem="6UY-hF-iXh" firstAttribute="centerX" secondItem="Y0d-Lj-vOA" secondAttribute="centerX" id="qBO-ae-aFw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rSh-bf-7ob"/>
                     </view>
                 </viewController>
@@ -135,8 +139,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn-scan" width="148" height="49"/>
+<<<<<<< HEAD
+>>>>>>> 4121e9ffb3ed58932c78ccb446bcd663e4238761
         <image name="btn-scan-1" width="296" height="98"/>
-        <image name="unlock.png" width="262" height="218"/>
+        <image name="unlock.png" width="262" height="218.5"/>
     </resources>
 </document>
