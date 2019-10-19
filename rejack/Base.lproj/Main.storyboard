@@ -96,7 +96,7 @@
                         <viewLayoutGuide key="safeArea" id="o1S-Ti-13j"/>
                     </view>
                     <connections>
-                        <outlet property="rideOffBtn" destination="Nex-Fn-u1y" id="frl-K2-phU"/>
+                        <outlet property="rideOffBtn" destination="Nex-Fn-u1y" id="2Hq-Kc-7At"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDo-AI-59M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

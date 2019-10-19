@@ -11,7 +11,7 @@ import CoreMotion
 import CoreLocation
 
 protocol RideOnViewInterface: class {
-    func toRideOff()
+    
 }
 
 class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationManagerDelegate {
@@ -22,12 +22,12 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
     
     var pre_lat = 0.0
     var pre_lon = 0.0
-    var loc_counter = 0
+    var loc_counter: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.rideOffBtn.alpha = 0
+        self.rideOffBtn.isEnabled = false
         
         //presenter = RideOnPresenter(with: view as! RideOnViewInterface)
         
@@ -50,11 +50,27 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        for location in locations {
-            print("緯度:\(location.coordinate.latitude) 経度:\(location.coordinate.longitude)")
+        guard let location = locations.last,
+            CLLocationCoordinate2DIsValid(location.coordinate) else { return }
+        let lat = location.coordinate.latitude
+        let lon = location.coordinate.longitude
+        
+        print("lat: ", lat)
+        print("lon: ", lon)
+        print("pre_lat", pre_lat)
+        print("pre_lon", pre_lon)
+        
+        if round(lat*100)/100 == round(pre_lat*100)/100 && round(lon*100)/100 == round(pre_lon*100)/100 {
+            loc_counter += 1
+            print(loc_counter)
+            if loc_counter > 5 {
+                self.showButton()
+                self.locationMg.stopUpdatingLocation()
+            }
         }
         
-        
+        pre_lon = location.coordinate.longitude
+        pre_lat = location.coordinate.latitude
     }
     
     func startAlert() {
@@ -66,11 +82,7 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
     }
     
     func showButton() {
-        self.rideOffBtn.alpha = 1
-    }
-    
-    func toRideOff() {
-        
+        self.rideOffBtn.isEnabled = true
     }
     
 }
