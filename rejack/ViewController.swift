@@ -10,32 +10,31 @@ import UIKit
 import CoreNFC
 
 class ViewController: UIViewController, NFCNDEFReaderSessionDelegate {
+    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
+        
+    }
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+        for message in messages {
+            for record in message.records {
+                print(String(data: record.payload, encoding: .utf8)!)
+            }
+        }
+    }
+    
     var session: NFCNDEFReaderSession?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
-        print(error.localizedDescription)
-    }
-    
-    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
-        for message in messages {
-            for record in message.records {
-                if let string = String(data: record.payload, encoding: .ascii) {
-                    print(string)
-                }
-            }
-        }
-    }
-    
     @IBAction func readNFC(_ sender: UIButton) {
         print("button pushed!!")
+        
         guard NFCNDEFReaderSession.readingAvailable else {
             let alertController = UIAlertController(
-                title: "Scanning Not Supported",
-                message: "This device doesn't support tag scanning.",
+                title: "スキャンできません",
+                message: "このデバイスやと無理ですよ",
                 preferredStyle: .alert
             )
             alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -44,7 +43,7 @@ class ViewController: UIViewController, NFCNDEFReaderSessionDelegate {
         }
         
         session = NFCNDEFReaderSession(delegate: self, queue: nil, invalidateAfterFirstRead: false)
-        session?.alertMessage = "Hold your iPhone near the item to learn more about it."
+        session?.alertMessage = "カードを近づけてーー"
         session?.begin()
     }
     
