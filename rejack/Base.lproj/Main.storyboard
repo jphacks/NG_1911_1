@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssb-qh-ctw">
-                                <rect key="frame" x="-108.5" y="381" width="592" height="196"/>
+                                <rect key="frame" x="39.5" y="479" width="296" height="98"/>
                                 <state key="normal" image="btn-scan-1">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -81,16 +81,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nex-Fn-u1y">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nex-Fn-u1y">
+                                <rect key="frame" x="39.5" y="459" width="296" height="98"/>
+                                <state key="normal" image="btn-scan-1"/>
                                 <connections>
                                     <segue destination="xlr-bh-sDd" kind="show" id="Khb-6M-0RW"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="o1S-Ti-13j" firstAttribute="bottom" secondItem="Nex-Fn-u1y" secondAttribute="bottom" constant="90" id="YTf-gK-1qG"/>
+                            <constraint firstItem="Nex-Fn-u1y" firstAttribute="centerX" secondItem="rFK-Zx-i70" secondAttribute="centerX" id="lMd-yI-i4b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="o1S-Ti-13j"/>
                     </view>
                     <connections>
@@ -99,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDo-AI-59M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="133"/>
+            <point key="canvasLocation" x="940" y="132.68365817091455"/>
         </scene>
         <!--Ride Off View Controller-->
         <scene sceneID="j4d-xC-h4T">
@@ -109,16 +112,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UY-hF-iXh">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UY-hF-iXh">
+                                <rect key="frame" x="39.5" y="459" width="296" height="98"/>
+                                <state key="normal" image="btn-fin.png"/>
                                 <connections>
                                     <action selector="rideOff" destination="xlr-bh-sDd" eventType="touchUpInside" id="bdL-5l-Ibp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rSh-bf-7ob" firstAttribute="bottom" secondItem="6UY-hF-iXh" secondAttribute="bottom" constant="90" id="fcR-bB-pyY"/>
+                            <constraint firstItem="6UY-hF-iXh" firstAttribute="centerX" secondItem="Y0d-Lj-vOA" secondAttribute="centerX" id="qBO-ae-aFw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rSh-bf-7ob"/>
                     </view>
                 </viewController>
@@ -128,6 +134,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn-fin.png" width="148" height="49"/>
         <image name="btn-scan-1" width="296" height="98"/>
         <image name="unlock.png" width="262" height="218.5"/>
     </resources>

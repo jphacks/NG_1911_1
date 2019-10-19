@@ -27,6 +27,8 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "running.png")!)
+        
         self.rideOffBtn.isEnabled = false
         
         //presenter = RideOnPresenter(with: view as! RideOnViewInterface)
@@ -83,6 +85,7 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
     
     func showButton() {
         self.rideOffBtn.isEnabled = true
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "stop.png")!)
     }
     
 }
