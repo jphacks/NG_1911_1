@@ -37,6 +37,7 @@
 		C505E32D235B1EF200CB61DF /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = C505E329235B1EF200CB61DF /* stop.png */; };
 		C505E338235B681800CB61DF /* btn-fin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C505E336235B681800CB61DF /* btn-fin@2x.png */; };
 		C505E339235B681800CB61DF /* btn-fin.png in Resources */ = {isa = PBXBuildFile; fileRef = C505E337235B681800CB61DF /* btn-fin.png */; };
+		C505E33B235B861300CB61DF /* logo-gr.png in Resources */ = {isa = PBXBuildFile; fileRef = C505E33A235B861300CB61DF /* logo-gr.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		C505E329235B1EF200CB61DF /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		C505E336235B681800CB61DF /* btn-fin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-fin@2x.png"; sourceTree = "<group>"; };
 		C505E337235B681800CB61DF /* btn-fin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn-fin.png"; sourceTree = "<group>"; };
+		C505E33A235B861300CB61DF /* logo-gr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-gr.png"; sourceTree = "<group>"; };
 		F0ADF5A928C73EFD803535F5 /* Pods_rejackTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rejackTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F210CF381321713F599A946C /* Pods-rejackTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rejackTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rejackTests/Pods-rejackTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F2F133B00BADA405D4868CBB /* Pods-rejackUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rejackUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rejackUITests/Pods-rejackUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				164A926C235AD5860002901E /* RideOffPresenter.swift */,
 				164A9266235AD33E0002901E /* RideOffViewController.swift */,
 				16796D702358BB2000EAAFFE /* Main.storyboard */,
+				C505E33A235B861300CB61DF /* logo-gr.png */,
 				C505E326235B1EF100CB61DF /* running.png */,
 				C505E327235B1EF200CB61DF /* running@2x.png */,
 				C505E329235B1EF200CB61DF /* stop.png */,
@@ -349,6 +352,7 @@
 				C505E32C235B1EF200CB61DF /* stop@2x.png in Resources */,
 				C505E338235B681800CB61DF /* btn-fin@2x.png in Resources */,
 				C505E2E9235AF2E100CB61DF /* unlock@2x.png in Resources */,
+				C505E33B235B861300CB61DF /* logo-gr.png in Resources */,
 				C505E2E5235AF2AD00CB61DF /* logo-w@2x.png in Resources */,
 				C505E2DD235AF19B00CB61DF /* btn-scan.png in Resources */,
 				C505E32A235B1EF200CB61DF /* running.png in Resources */,

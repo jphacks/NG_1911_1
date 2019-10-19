@@ -122,6 +122,7 @@
                                 <state key="normal" image="btn-fin-1"/>
                                 <connections>
                                     <action selector="rideOff" destination="xlr-bh-sDd" eventType="touchUpInside" id="bdL-5l-Ibp"/>
+                                    <segue destination="iIG-rR-F0R" kind="show" id="ejO-FR-xfW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,11 +138,51 @@
             </objects>
             <point key="canvasLocation" x="1760.8" y="132.68365817091455"/>
         </scene>
+        <!--Finish-->
+        <scene sceneID="7fp-xO-hUL">
+            <objects>
+                <viewController title="Finish" id="iIG-rR-F0R" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BhE-a8-8Rz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo-gr.png" translatesAutoresizingMaskIntoConstraints="NO" id="tGQ-n3-93H">
+                                <rect key="frame" x="10" y="206" width="355" height="276"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M5C-xh-zmf">
+                                <rect key="frame" x="14" y="60" width="347" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ご利用ありがとうございました">
+                                        <attributes>
+                                            <color key="NSColor" red="0.32549019610000002" green="0.76470588240000004" blue="0.74509803919999995" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="22" name="HiraginoSans-W7"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tGQ-n3-93H" firstAttribute="centerX" secondItem="BhE-a8-8Rz" secondAttribute="centerX" id="FCp-gf-o8V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vHD-SQ-KEv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SWF-rF-6lp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GK1-4f-JZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2528.8000000000002" y="132.68365817091455"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btn-fin-1" width="296" height="98"/>
         <image name="btn-scan" width="148" height="49"/>
         <image name="btn-scan-1" width="296" height="98"/>
+        <image name="logo-gr.png" width="355" height="457"/>
         <image name="unlock.png" width="262" height="218.5"/>
     </resources>
 </document>
