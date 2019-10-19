@@ -16,6 +16,9 @@ struct Test: Codable {
 
 protocol ApiModelDelegate {
     func didGetApi()
+    func didKeyOpen()
+    func didStartAlert()
+    func didStopAlert()
 }
 
 class ApiModel {
@@ -38,5 +41,41 @@ class ApiModel {
 //                print(error)
 //            }
 //        }
+    }
+    
+    func unlockKey() {
+        Alamofire.request(url + "/api?key?open", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+            guard let data = response.data else {
+                return
+            }
+            print(data)
+        }
+    }
+    
+    func lockKey() {
+        Alamofire.request(url + "/api/key/close", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+            guard let data = response.data else {
+                return
+            }
+            print(data)
+        }
+    }
+    
+    func startAlert() {
+        Alamofire.request(url + "/api/alert/start", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+            guard let data = response.data else {
+                return
+            }
+            print(data)
+        }
+    }
+    
+    func stopAlert() {
+        Alamofire.request(url + "/api/alert/stop", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+            guard let data = response.data else {
+                return
+            }
+            print(data)
+        }
     }
 }

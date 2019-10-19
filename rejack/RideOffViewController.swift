@@ -20,5 +20,9 @@ class RideOffViewController: UIViewController, RideOffViewInterface {
         
         presenter = RideOffPresenter(with: view as! RideOffViewInterface)
     }
+    
+    func lockKey() {
+        presenter.lockLey()
+    }
 
 }

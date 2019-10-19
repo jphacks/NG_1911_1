@@ -25,16 +25,28 @@ class HomePresenter {
     }
     
     func unlockKey() {
-        
+        apiModel.unlockKey()
     }
     
     func toRideView() {
-        
+        view?.toRideView()
     }
 }
 
 extension HomePresenter: ApiModelDelegate {
+    func didStartAlert() {
+        
+    }
+    
+    func didStopAlert() {
+        
+    }
+    
     func didGetApi() {
         print("good!")
+    }
+    
+    func didKeyOpen() {
+        self.toRideView()
     }
 }

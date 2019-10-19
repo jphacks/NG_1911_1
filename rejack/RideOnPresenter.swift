@@ -19,9 +19,22 @@ class RideOnPresenter {
         
         apiModel.delegate = self
     }
+    
+    func startAlert() {
+        apiModel.startAlert()
+    }
 }
 
 extension RideOnPresenter: ApiModelDelegate {
+    func didStartAlert() {
+    }
+    
+    func didStopAlert() {
+    }
+    
+    func didKeyOpen() {
+    }
+    
     func didGetApi() {
         print("good!")
     }

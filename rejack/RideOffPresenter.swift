@@ -19,9 +19,25 @@ class RideOffPresenter {
         
         apiModel.delegate = self
     }
+    
+    func lockLey() {
+        apiModel.lockKey()
+    }
 }
 
 extension RideOffPresenter: ApiModelDelegate {
+    func didStartAlert() {
+        
+    }
+    
+    func didStopAlert() {
+        
+    }
+    
+    func didKeyOpen() {
+        
+    }
+    
     func didGetApi() {
         
     }
