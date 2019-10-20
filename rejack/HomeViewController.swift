@@ -54,8 +54,14 @@ class HomeViewController: UIViewController, HomeViewInterface, NFCNDEFReaderSess
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "rideOn" {
             let rideon = segue.destination as! RideOnViewController
-            rideon.routes = self.routes
+            //rideon.routes = self.routes
             rideon.needNavigation = self.needNavigation
+        } else if segue.identifier == "toSetNavi" {
+            let toSetNavi = segue.destination as! SetNavigationViewController
+            toSetNavi.routes = self.routes
+            toSetNavi.needNavigation = self.needNavigation
+            toSetNavi.lat = self.lat
+            toSetNavi.lon = self.lon
         }
     }
     
@@ -90,48 +96,49 @@ class HomeViewController: UIViewController, HomeViewInterface, NFCNDEFReaderSess
             self.performSegue(withIdentifier: "rideOn", sender: nil)
         })
         let useMap = UIAlertAction(title: "利用する", style: .default, handler: {[weak alert] (action) -> Void in
-            guard let textField = alert?.textFields else {
-                return
-            }
-            guard !textField.isEmpty else {
-                return
-            }
-            let destination = textField[0].text!
-            let urlString: String = self.url + "/api/route?origin=\(String(self.lat)),\(String(self.lon))&destination=\(destination)"
-            let encodeUrlString: String = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-            Alamofire.request(encodeUrlString, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
-                guard let data = response.data else { return }
-                let decoder  = JSONDecoder()
-                do {
-                    let routes: [Route] = try decoder.decode([Route].self, from: data)
-                    self.routes = routes
-                    print(routes)
-                    self.needNavigation = true
-                    self.locationMg.stopUpdatingHeading()
-                    self.performSegue(withIdentifier: "rideOn", sender: nil)
-                } catch {
-                    print(error)
-                }
-            }
+//            guard let textField = alert?.textFields else {
+//                return
+//            }
+//            guard !textField.isEmpty else {
+//                return
+//            }
+//            let destination = textField[0].text!
+//            let urlString: String = self.url + "/api/route?origin=\(String(self.lat)),\(String(self.lon))&destination=\(destination)"
+//            let encodeUrlString: String = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+//            Alamofire.request(encodeUrlString, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+//                guard let data = response.data else { return }
+//                let decoder  = JSONDecoder()
+//                do {
+//                    let routes: [Route] = try decoder.decode([Route].self, from: data)
+//                    self.routes = routes
+//                    print(routes)
+//                    self.needNavigation = true
+//                    self.locationMg.stopUpdatingHeading()
+//                    self.performSegue(withIdentifier: "rideOn", sender: nil)
+//                } catch {
+//                    print(error)
+//                }
+//            }
+            self.performSegue(withIdentifier: "toSetNavi", sender: nil)
         })
         
-        let APIKEY = KeyManager().getValue(key: "apikey") as? String
-        let urlstr: String = "https://maps.google.com/maps/api/staticmap?center=名古屋大学&markers=color:blue%7C名古屋大学&size=600x400&zoom=15&key=" + APIKEY!
-        let encodeUrlstr: String = urlstr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
-        let url = URL(string: encodeUrlstr)
-        do {
-            let data = try Data(contentsOf: url!)
-            let image = UIImage(data: data)
-            let imgViewTitle = UIImageView(frame: CGRect(x: 10, y: 10, width: 100, height: 100))
-            imgViewTitle.image = image
-            alert.view.addSubview(imgViewTitle)
-        }catch let err {
-            print("Error : \(err.localizedDescription)")
-        }
+//        let APIKEY = KeyManager().getValue(key: "apikey") as? String
+//        let urlstr: String = "https://maps.google.com/maps/api/staticmap?center=名古屋大学&markers=color:blue%7C名古屋大学&size=600x400&zoom=15&key=" + APIKEY!
+//        let encodeUrlstr: String = urlstr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+//        let url = URL(string: encodeUrlstr)
+//        do {
+//            let data = try Data(contentsOf: url!)
+//            let image = UIImage(data: data)
+//            let imgViewTitle = UIImageView(frame: CGRect(x: 10, y: 10, width: 100, height: 100))
+//            imgViewTitle.image = image
+//            alert.view.addSubview(imgViewTitle)
+//        }catch let err {
+//            print("Error : \(err.localizedDescription)")
+//        }
         
         alert.addAction(notUseMap)
         alert.addAction(useMap)
-        alert.addTextField(configurationHandler: nil)
+        //alert.addTextField(configurationHandler: nil)
         present(alert, animated: true, completion: nil)
     }
     

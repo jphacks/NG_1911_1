@@ -120,6 +120,7 @@
                         <outlet property="serchBtn" destination="hYM-XB-aC4" id="DUS-aY-aqd"/>
                         <outlet property="settingBtn" destination="Ahq-8o-NWR" id="cKd-CW-7lA"/>
                         <outlet property="textView" destination="n60-km-Rhk" id="jKA-te-gES"/>
+                        <segue destination="r0u-Sl-Ydd" kind="show" identifier="toRideOnWithNavi" id="eQk-Vm-up2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gic-6O-VIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,4 +199,7 @@
         <image name="btn-scan-1" width="296" height="98"/>
         <image name="unlock.png" width="262" height="218"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eQk-Vm-up2"/>
+    </inferredMetricsTieBreakers>
 </document>

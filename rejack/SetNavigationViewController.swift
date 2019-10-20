@@ -7,24 +7,72 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class SetNavigationViewController: UIViewController, UITextViewDelegate {
+class SetNavigationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var serchBtn: UIButton!
     @IBOutlet var settingBtn: UIButton!
     @IBOutlet var destination: UIImageView!
     @IBOutlet var textView: UITextField!
+    
+    var lat = 0.0
+    var lon = 0.0
+    var url = ApiUrl.shared.baseUrl
+    var routes: [Route]?
+    var needNavigation: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        textView.delegate = self
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toRideOnWithNavi" {
+            let rideOn = segue.destination as! RideOnViewController
+            rideOn.routes = self.routes
+            rideOn.needNavigation = self.needNavigation
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     @IBAction func serchAC() {
+        let destination = textView.text!
+        let APIKEY = KeyManager().getValue(key: "apikey") as? String
+        let urlstr: String = "https://maps.google.com/maps/api/staticmap?center=名古屋大学&markers=color:blue%7C\(destination)&size=600x400&zoom=15&key=" + APIKEY!
+        let encodeUrlstr: String = urlstr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let url = URL(string: encodeUrlstr)
+        do {
+            let data = try Data(contentsOf: url!)
+            let image = UIImage(data: data)
+            self.destination.image = image
+        }catch let err {
+            print("Error : \(err.localizedDescription)")
+        }
     }
     
     @IBAction func settingAC() {
+        let destination = textView.text!
+        let urlString: String = self.url + "/api/route?origin=\(String(self.lat)),\(String(self.lon))&destination=\(destination)"
+        let encodeUrlString: String = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        Alamofire.request(encodeUrlString, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+            guard let data = response.data else { return }
+            let decoder  = JSONDecoder()
+            do {
+                let routes: [Route] = try decoder.decode([Route].self, from: data)
+                self.routes = routes
+                print(routes)
+                self.needNavigation = true
+                self.performSegue(withIdentifier: "toRideOnWithNavi", sender: nil)
+            } catch {
+                print(error)
+            }
+        }
     }
 
 }
