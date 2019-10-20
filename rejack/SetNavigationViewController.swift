@@ -8,10 +8,11 @@
 
 import UIKit
 
-class SetNavigationViewController: UIViewController {
+class SetNavigationViewController: UIViewController, UITextViewDelegate {
     @IBOutlet var serchBtn: UIButton!
     @IBOutlet var settingBtn: UIButton!
     @IBOutlet var destination: UIImageView!
+    @IBOutlet var textView: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()

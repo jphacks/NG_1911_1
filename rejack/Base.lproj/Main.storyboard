@@ -119,6 +119,7 @@
                         <outlet property="destination" destination="2Y6-8V-blg" id="9pN-l3-dZu"/>
                         <outlet property="serchBtn" destination="hYM-XB-aC4" id="DUS-aY-aqd"/>
                         <outlet property="settingBtn" destination="Ahq-8o-NWR" id="cKd-CW-7lA"/>
+                        <outlet property="textView" destination="n60-km-Rhk" id="jKA-te-gES"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gic-6O-VIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
