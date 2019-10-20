@@ -13,13 +13,8 @@
 		162D2C8B2359E7DB00183E24 /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162075CF2358BC9D003D7316 /* CoreNFC.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		164A9265235AD3310002901E /* RideOnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A9264235AD3310002901E /* RideOnViewController.swift */; };
 		164A9267235AD33E0002901E /* RideOffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A9266235AD33E0002901E /* RideOffViewController.swift */; };
-		164A9269235AD5700002901E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A9268235AD5700002901E /* HomePresenter.swift */; };
-		164A926B235AD57D0002901E /* RideOnPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A926A235AD57D0002901E /* RideOnPresenter.swift */; };
-		164A926D235AD5860002901E /* RideOffPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A926C235AD5860002901E /* RideOffPresenter.swift */; };
 		164A926F235AD5910002901E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A926E235AD5910002901E /* HomeViewController.swift */; };
-		164A9271235AD5AB0002901E /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A9270235AD5AB0002901E /* ApiModel.swift */; };
 		16796D6D2358BB2000EAAFFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16796D6C2358BB2000EAAFFE /* AppDelegate.swift */; };
-		16796D6F2358BB2000EAAFFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16796D6E2358BB2000EAAFFE /* ViewController.swift */; };
 		16796D722358BB2000EAAFFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16796D702358BB2000EAAFFE /* Main.storyboard */; };
 		16796D742358BB2100EAAFFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16796D732358BB2100EAAFFE /* Assets.xcassets */; };
 		16796D772358BB2100EAAFFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16796D752358BB2100EAAFFE /* LaunchScreen.storyboard */; };
@@ -57,14 +52,9 @@
 		162075CF2358BC9D003D7316 /* CoreNFC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreNFC.framework; path = System/Library/Frameworks/CoreNFC.framework; sourceTree = SDKROOT; };
 		164A9264235AD3310002901E /* RideOnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideOnViewController.swift; sourceTree = "<group>"; };
 		164A9266235AD33E0002901E /* RideOffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideOffViewController.swift; sourceTree = "<group>"; };
-		164A9268235AD5700002901E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		164A926A235AD57D0002901E /* RideOnPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideOnPresenter.swift; sourceTree = "<group>"; };
-		164A926C235AD5860002901E /* RideOffPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideOffPresenter.swift; sourceTree = "<group>"; };
 		164A926E235AD5910002901E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		164A9270235AD5AB0002901E /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiModel.swift; sourceTree = "<group>"; };
 		16796D692358BB2000EAAFFE /* rejack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rejack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16796D6C2358BB2000EAAFFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16796D6E2358BB2000EAAFFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16796D712358BB2000EAAFFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16796D732358BB2100EAAFFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16796D762358BB2100EAAFFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -160,14 +150,9 @@
 				162075CD2358BC8E003D7316 /* rejack.entitlements */,
 				16796D6C2358BB2000EAAFFE /* AppDelegate.swift */,
 				1690E3A0235BD166000BA76A /* KeyManager.swift */,
-				16796D6E2358BB2000EAAFFE /* ViewController.swift */,
-				164A9270235AD5AB0002901E /* ApiModel.swift */,
-				164A9268235AD5700002901E /* HomePresenter.swift */,
 				164A926E235AD5910002901E /* HomeViewController.swift */,
 				1690E3C0235BEBF9000BA76A /* SetNavigationViewController.swift */,
-				164A926A235AD57D0002901E /* RideOnPresenter.swift */,
 				164A9264235AD3310002901E /* RideOnViewController.swift */,
-				164A926C235AD5860002901E /* RideOffPresenter.swift */,
 				164A9266235AD33E0002901E /* RideOffViewController.swift */,
 				16796D702358BB2000EAAFFE /* Main.storyboard */,
 				1612C330235C100A0047A03A /* running.png */,
@@ -453,12 +438,7 @@
 				164A9267235AD33E0002901E /* RideOffViewController.swift in Sources */,
 				1690E3A1235BD166000BA76A /* KeyManager.swift in Sources */,
 				164A9265235AD3310002901E /* RideOnViewController.swift in Sources */,
-				164A926D235AD5860002901E /* RideOffPresenter.swift in Sources */,
 				164A926F235AD5910002901E /* HomeViewController.swift in Sources */,
-				16796D6F2358BB2000EAAFFE /* ViewController.swift in Sources */,
-				164A926B235AD57D0002901E /* RideOnPresenter.swift in Sources */,
-				164A9269235AD5700002901E /* HomePresenter.swift in Sources */,
-				164A9271235AD5AB0002901E /* ApiModel.swift in Sources */,
 				16796D6D2358BB2000EAAFFE /* AppDelegate.swift in Sources */,
 				1690E3C1235BEBF9000BA76A /* SetNavigationViewController.swift in Sources */,
 			);

@@ -11,16 +11,11 @@ import CoreMotion
 import CoreLocation
 import AVFoundation
 
-protocol RideOnViewInterface: class {
-    
-}
-
-class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationManagerDelegate {
+class RideOnViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var rideOffBtn: UIButton!
     @IBOutlet var warningImageView: UIImageView!
     
     var locationMg: CLLocationManager!
-    var presenter: RideOnPresenter!
     
     var pre_lat = 0.0
     var pre_lon = 0.0
@@ -34,7 +29,7 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
         super.viewDidLoad()
         
         if needNavigation {
-            let text = "案内開始します"
+            let text = "案内を開始します"
             let talker = AVSpeechSynthesizer()
             let utterance = AVSpeechUtterance(string: text)
             utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
@@ -48,21 +43,10 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
             talker2.speak(utterance2)
             sleep(3)
         }
-        
-//        routes = []
-//        let route1 = Route.init(lat: 35, lng: 35, instructions: "右やで")
-//        let route2 = Route.init(lat: 35, lng: 35, instructions: "次は左")
-//        let route3 = Route.init(lat: 35, lng: 35, instructions: "次は右")
-//        let route4 = Route.init(lat: 35, lng: 35, instructions: "ついたで")
-//        routes?.append(route1)
-//        routes?.append(route2)
-//        routes?.append(route3)
-//        routes?.append(route4)
 
         if CLLocationManager.locationServicesEnabled() {
             locationMg = CLLocationManager()
             locationMg.delegate = self
-            //locationMg.distanceFilter = 1
             locationMg.startUpdatingLocation()
         }
         
@@ -70,8 +54,6 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
         
         self.rideOffBtn.isEnabled = false
         self.warningImageView.alpha = 0
-        
-        //presenter = RideOnPresenter(with: view as! RideOnViewInterface)
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -116,10 +98,9 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
         
         if needNavigation {
             if current_route_index < (routes?.count)! {
-                if round(routes![current_route_index].lat*pow(10, 5)) < round(location.coordinate.latitude*pow(10, 5))
-                    && round(routes![current_route_index].lat*pow(10, 5)) > round(location.coordinate.latitude*pow(10, 5))
-                    && round(routes![current_route_index].lng*pow(10, 5)) < round(location.coordinate.latitude*pow(10, 5))
-                    && round(routes![current_route_index].lng*pow(10, 5)) < round(location.coordinate.latitude*pow(10, 5))
+                
+                if round(routes![current_route_index].lat*pow(10, 5)) ==  round(location.coordinate.latitude*pow(10, 5))
+                    && round(routes![current_route_index].lng*pow(10, 5)) == round(location.coordinate.latitude*pow(10, 5))
                 {
                     self.locationMg.stopUpdatingHeading()
                     let text = routes![current_route_index].instructions
@@ -132,14 +113,6 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
                 }
             }
         }
-    }
-    
-    func startAlert() {
-        presenter.startAlert()
-    }
-    
-    func showAlert() {
-        
     }
     
     func showButton() {

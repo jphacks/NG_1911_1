@@ -19,14 +19,9 @@ struct Route: Codable {
     var instructions: String
 }
 
-protocol HomeViewInterface: class {
-    func toRideView()
-}
-
 var doRide: Bool = false
 
-class HomeViewController: UIViewController, HomeViewInterface, NFCNDEFReaderSessionDelegate, CLLocationManagerDelegate {
-    var presenter: HomePresenter!
+class HomeViewController: UIViewController, NFCNDEFReaderSessionDelegate, CLLocationManagerDelegate {
     var url = ApiUrl.shared.baseUrl
     
     var routes: [Route]?
@@ -47,16 +42,11 @@ class HomeViewController: UIViewController, HomeViewInterface, NFCNDEFReaderSess
                 self.locationMg.requestLocation() // 一度きりの取得
             }
         }
-
-        presenter = HomePresenter(with: self)
-
-        presenter?.test()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "rideOn" {
             let rideon = segue.destination as! RideOnViewController
-            //rideon.routes = self.routes
             rideon.needNavigation = self.needNavigation
         } else if segue.identifier == "toSetNavi" {
             let toSetNavi = segue.destination as! SetNavigationViewController
@@ -68,7 +58,7 @@ class HomeViewController: UIViewController, HomeViewInterface, NFCNDEFReaderSess
     }
     
     func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
-        
+        print(error)
     }
     
     func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
@@ -87,7 +77,13 @@ class HomeViewController: UIViewController, HomeViewInterface, NFCNDEFReaderSess
     }
     
     func unlockKey() {
-        presenter.unlockKey()
+        Alamofire.request(url + "/api/key/open", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+            guard let data = response.data else {
+                return
+            }
+            print(data)
+            self.toRideView()
+        }
     }
     
     func toRideView() {
@@ -104,7 +100,6 @@ class HomeViewController: UIViewController, HomeViewInterface, NFCNDEFReaderSess
         
         alert.addAction(notUseMap)
         alert.addAction(useMap)
-        //alert.addTextField(configurationHandler: nil)
         present(alert, animated: true, completion: nil)
     }
     
