@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import UserNotifications
 import Alamofire
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let center = UNUserNotificationCenter.current()
+        
+        //通知の許諾
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if granted {
+                print("Allowed")
+            } else {
+                print("Didn't allowed")
+            }
+        }
+        
         return true
     }
 
@@ -36,6 +50,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             self.isAgain = true
             print(data)
+        }
+        
+        let content = UNMutableNotificationContent()
+        content.title = "！警告！"
+        content.body = "運転中にスマホいじったらあかんで！"
+        content.sound = UNNotificationSound.default
+        // 5秒後に通知を出すようにする
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let request = UNNotificationRequest(identifier: "warningNotfication", content: content, trigger: trigger)
+        let center = UNUserNotificationCenter.current()
+        center.add(request) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
         }
     }
 
@@ -63,7 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 class ApiUrl {
-    var baseUrl: String = "http://ec2-13-114-103-68.ap-northeast-1.compute.amazonaws.coma"
+    var baseUrl: String = "http://ec2-13-114-103-68.ap-northeast-1.compute.amazonaws.com"
     static let shared = ApiUrl()
     
     private init() {}
