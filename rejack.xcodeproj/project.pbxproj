@@ -26,6 +26,7 @@
 		1690E39D235BC91E000BA76A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1690E39C235BC91E000BA76A /* CoreLocation.framework */; };
 		1690E39F235BCE93000BA76A /* apikey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1690E39E235BCE93000BA76A /* apikey.plist */; };
 		1690E3A1235BD166000BA76A /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690E3A0235BD166000BA76A /* KeyManager.swift */; };
+		1690E3C1235BEBF9000BA76A /* SetNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690E3C0235BEBF9000BA76A /* SetNavigationViewController.swift */; };
 		4D7509E309E8787E129EFFC0 /* Pods_rejack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69BABB8622DD869E9FF43807 /* Pods_rejack.framework */; };
 		55AF5A901C2916E7D85B3B04 /* Pods_rejackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B9332E6A473F7379949942 /* Pods_rejackUITests.framework */; };
 		C505E2DD235AF19B00CB61DF /* btn-scan.png in Resources */ = {isa = PBXBuildFile; fileRef = C505E2DC235AF19B00CB61DF /* btn-scan.png */; };
@@ -85,6 +86,7 @@
 		1690E39C235BC91E000BA76A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1690E39E235BCE93000BA76A /* apikey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = apikey.plist; sourceTree = "<group>"; };
 		1690E3A0235BD166000BA76A /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
+		1690E3C0235BEBF9000BA76A /* SetNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNavigationViewController.swift; sourceTree = "<group>"; };
 		218547299DE32A70C1ED2774 /* Pods-rejackUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rejackUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rejackUITests/Pods-rejackUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3BE095DEA58EE1861F78D112 /* Pods-rejackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rejackTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-rejackTests/Pods-rejackTests.release.xcconfig"; sourceTree = "<group>"; };
 		50B9332E6A473F7379949942 /* Pods_rejackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rejackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +184,7 @@
 				164A9270235AD5AB0002901E /* ApiModel.swift */,
 				164A9268235AD5700002901E /* HomePresenter.swift */,
 				164A926E235AD5910002901E /* HomeViewController.swift */,
+				1690E3C0235BEBF9000BA76A /* SetNavigationViewController.swift */,
 				164A926A235AD57D0002901E /* RideOnPresenter.swift */,
 				164A9264235AD3310002901E /* RideOnViewController.swift */,
 				164A926C235AD5860002901E /* RideOffPresenter.swift */,
@@ -497,6 +500,7 @@
 				164A9269235AD5700002901E /* HomePresenter.swift in Sources */,
 				164A9271235AD5AB0002901E /* ApiModel.swift in Sources */,
 				16796D6D2358BB2000EAAFFE /* AppDelegate.swift in Sources */,
+				1690E3C1235BEBF9000BA76A /* SetNavigationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

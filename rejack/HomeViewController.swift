@@ -135,10 +135,6 @@ class HomeViewController: UIViewController, HomeViewInterface, NFCNDEFReaderSess
         present(alert, animated: true, completion: nil)
     }
     
-//    func urlEncode(string: String) -> String {
-//        return string.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
-//    }
-    
     @IBAction func readNFC(_ sender: UIButton) {
         //Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(HomeViewController.timerUpdate), userInfo: nil, repeats: true)
         self.unlockKey()
