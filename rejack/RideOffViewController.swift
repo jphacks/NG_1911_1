@@ -20,8 +20,6 @@ class RideOffViewController: UIViewController, RideOffViewInterface {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //presenter = RideOffPresenter(with: view as! RideOffViewInterface)
     }
     
     func lockKey() {

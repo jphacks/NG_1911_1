@@ -39,7 +39,14 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
             let utterance = AVSpeechUtterance(string: text)
             utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
             talker.speak(utterance)
-            sleep(1)
+            sleep(3)
+            
+            let first_navi = routes![0].instructions
+            let talker2 = AVSpeechSynthesizer()
+            let utterance2 = AVSpeechUtterance(string: first_navi)
+            utterance2.voice = AVSpeechSynthesisVoice(language: "ja-JP")
+            talker2.speak(utterance2)
+            sleep(3)
         }
         
 //        routes = []
@@ -89,17 +96,17 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
         print("pre_lat", pre_lat)
         print("pre_lon", pre_lon)
         
-        if round(lat*pow(10, 7))/pow(10, 7) == round(pre_lat*pow(10, 7))/pow(10, 7)
-            && round(lon*pow(10, 7))/pow(10, 7) == round(pre_lon*pow(10, 7))/pow(10, 7) {
+        if round(lat*pow(10, 7)) == round(pre_lat*pow(10, 7))
+            && round(lon*pow(10, 7)) == round(pre_lon*pow(10, 7)) {
             loc_counter += 1
             print(loc_counter)
-            if loc_counter > 5 {
+            if loc_counter >= 1 {
                 self.showButton()
             }
         } else {
             loc_counter = 0
             print(loc_counter)
-            if loc_counter <= 5 {
+            if loc_counter < 1 {
                 self.hideButton()
             }
         }
@@ -109,10 +116,10 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
         
         if needNavigation {
             if current_route_index < (routes?.count)! {
-                if routes![current_route_index].lat < location.coordinate.latitude+pow(10, 3)
-                    && routes![current_route_index].lat > location.coordinate.latitude+pow(10, 3)
-                    && routes![current_route_index].lng < location.coordinate.longitude+pow(10, 3)
-                    && routes![current_route_index].lng < location.coordinate.longitude+pow(10, 3)
+                if round(routes![current_route_index].lat*pow(10, 5)) < round(location.coordinate.latitude*pow(10, 5))
+                    && round(routes![current_route_index].lat*pow(10, 5)) > round(location.coordinate.latitude*pow(10, 5))
+                    && round(routes![current_route_index].lng*pow(10, 5)) < round(location.coordinate.latitude*pow(10, 5))
+                    && round(routes![current_route_index].lng*pow(10, 5)) < round(location.coordinate.latitude*pow(10, 5))
                 {
                     self.locationMg.stopUpdatingHeading()
                     let text = routes![current_route_index].instructions
@@ -145,6 +152,7 @@ class RideOnViewController: UIViewController, RideOnViewInterface, CLLocationMan
     }
     
     @IBAction func rideOffAC(_ sender: UIButton) {
+        doRide = false
         self.locationMg.stopUpdatingLocation()
     }
 }

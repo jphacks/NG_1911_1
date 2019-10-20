@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0013D65534E50A3F1BBC4D0E /* Pods_rejackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0ADF5A928C73EFD803535F5 /* Pods_rejackTests.framework */; };
+		1612C331235C100A0047A03A /* running.png in Resources */ = {isa = PBXBuildFile; fileRef = 1612C330235C100A0047A03A /* running.png */; };
+		1612C333235C10100047A03A /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 1612C332235C10100047A03A /* stop.png */; };
 		162D2C8B2359E7DB00183E24 /* CoreNFC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 162075CF2358BC9D003D7316 /* CoreNFC.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		164A9265235AD3310002901E /* RideOnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A9264235AD3310002901E /* RideOnViewController.swift */; };
 		164A9267235AD33E0002901E /* RideOffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A9266235AD33E0002901E /* RideOffViewController.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1612C330235C100A0047A03A /* running.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = running.png; sourceTree = "<group>"; };
+		1612C332235C10100047A03A /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		162075CD2358BC8E003D7316 /* rejack.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rejack.entitlements; sourceTree = "<group>"; };
 		162075CF2358BC9D003D7316 /* CoreNFC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreNFC.framework; path = System/Library/Frameworks/CoreNFC.framework; sourceTree = SDKROOT; };
 		164A9264235AD3310002901E /* RideOnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideOnViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 				164A926C235AD5860002901E /* RideOffPresenter.swift */,
 				164A9266235AD33E0002901E /* RideOffViewController.swift */,
 				16796D702358BB2000EAAFFE /* Main.storyboard */,
+				1612C330235C100A0047A03A /* running.png */,
+				1612C332235C10100047A03A /* stop.png */,
 				16796D732358BB2100EAAFFE /* Assets.xcassets */,
 				16796D752358BB2100EAAFFE /* LaunchScreen.storyboard */,
 				16796D782358BB2100EAAFFE /* Info.plist */,
@@ -321,10 +327,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1612C331235C100A0047A03A /* running.png in Resources */,
 				16796D772358BB2100EAAFFE /* LaunchScreen.storyboard in Resources */,
 				1690E39F235BCE93000BA76A /* apikey.plist in Resources */,
 				16796D742358BB2100EAAFFE /* Assets.xcassets in Resources */,
 				16796D722358BB2000EAAFFE /* Main.storyboard in Resources */,
+				1612C333235C10100047A03A /* stop.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -68,6 +68,7 @@ class SetNavigationViewController: UIViewController, UITextFieldDelegate {
                 self.routes = routes
                 print(routes)
                 self.needNavigation = true
+                doRide = true
                 self.performSegue(withIdentifier: "toRideOnWithNavi", sender: nil)
             } catch {
                 print(error)

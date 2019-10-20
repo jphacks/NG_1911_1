@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        sleep(2)
         
         let center = UNUserNotificationCenter.current()
         
@@ -44,25 +45,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
-        Alamofire.request(ApiUrl.shared.baseUrl + "/api/alert/start", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
-            guard let data = response.data else {
-                return
+        if doRide {
+            Alamofire.request(ApiUrl.shared.baseUrl + "/api/alert/start", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+                guard let data = response.data else {
+                    return
+                }
+                self.isAgain = true
+                print(data)
             }
-            self.isAgain = true
-            print(data)
-        }
-        
-        let content = UNMutableNotificationContent()
-        content.title = "！警告！"
-        content.body = "運転中にスマホいじったらあかんで！"
-        content.sound = UNNotificationSound.default
-        // 5秒後に通知を出すようにする
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-        let request = UNNotificationRequest(identifier: "warningNotfication", content: content, trigger: trigger)
-        let center = UNUserNotificationCenter.current()
-        center.add(request) { (error) in
-            if let error = error {
-                print(error.localizedDescription)
+            
+            let content = UNMutableNotificationContent()
+            content.title = "！警告！"
+            content.body = "運転中にスマホいじったらあかんで！"
+            content.sound = UNNotificationSound.default
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            let request = UNNotificationRequest(identifier: "warningNotfication", content: content, trigger: trigger)
+            let center = UNUserNotificationCenter.current()
+            center.add(request) { (error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                }
             }
         }
     }
