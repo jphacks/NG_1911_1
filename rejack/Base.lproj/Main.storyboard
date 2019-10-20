@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssb-qh-ctw">
-                                <rect key="frame" x="39.5" y="479" width="296" height="98"/>
+                                <rect key="frame" x="39.5" y="463" width="296" height="114"/>
                                 <state key="normal" image="btn-scan-1">
                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -27,11 +25,11 @@
                                     <action selector="readNFC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yhe-YQ-rZo"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="unlock.png" translatesAutoresizingMaskIntoConstraints="NO" id="8mi-Hk-C5j">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="unlock" translatesAutoresizingMaskIntoConstraints="NO" id="8mi-Hk-C5j">
                                 <rect key="frame" x="-75" y="182" width="524" height="218"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O31-yG-HvE">
-                                <rect key="frame" x="14" y="60" width="347" height="81"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O31-yG-HvE">
+                                <rect key="frame" x="35" y="70" width="305" height="54"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment>
@@ -62,7 +60,9 @@
                             <constraint firstItem="8mi-Hk-C5j" firstAttribute="top" secondItem="O31-yG-HvE" secondAttribute="bottom" constant="41" id="N43-6a-RIl"/>
                             <constraint firstItem="8mi-Hk-C5j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-91" id="R4f-YC-J6S"/>
                             <constraint firstItem="8mi-Hk-C5j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aty-2x-Rux"/>
+                            <constraint firstItem="O31-yG-HvE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="dSh-Hi-NZH"/>
                             <constraint firstItem="Ssb-qh-ctw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gI4-yR-6Ya"/>
+                            <constraint firstItem="O31-yG-HvE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="p5t-jq-KTF"/>
                             <constraint firstItem="8mi-Hk-C5j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xuo-m4-eeM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -81,38 +81,65 @@
             <objects>
                 <viewController id="T9d-Ss-FNq" customClass="SetNavigationViewController" customModule="rejack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YBN-2x-U0G">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n60-km-Rhk">
-                                <rect key="frame" x="139" y="138" width="97" height="30"/>
+                                <rect key="frame" x="67" y="158" width="180" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Y6-8V-blg">
-                                <rect key="frame" x="67" y="312" width="240" height="128"/>
+                                <rect key="frame" x="67" y="236" width="240" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYM-XB-aC4">
-                                <rect key="frame" x="250" y="137" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahq-8o-NWR">
+                                <rect key="frame" x="39" y="486" width="296" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="serchAC" destination="T9d-Ss-FNq" eventType="touchUpInside" id="rrz-eO-2yv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ahq-8o-NWR">
-                                <rect key="frame" x="164" y="221" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="btn-destination-1"/>
                                 <connections>
                                     <action selector="settingAC" destination="T9d-Ss-FNq" eventType="touchUpInside" id="fbK-yq-fgR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQy-YA-iJK">
+                                <rect key="frame" x="88.5" y="70" width="198" height="54"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">目的地を設定すると
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.32549019610000002" green="0.76470588240000004" blue="0.74509803919999995" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="22" name="HiraginoSans-W7"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="道案内を開始します">
+                                        <attributes>
+                                            <color key="NSColor" red="0.32549019610000002" green="0.76470588240000004" blue="0.74509803919999995" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="22" name="HiraginoSans-W7"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="14" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYM-XB-aC4">
+                                <rect key="frame" x="264" y="153" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn-search-1"/>
+                                <connections>
+                                    <action selector="serchAC" destination="T9d-Ss-FNq" eventType="touchUpInside" id="rrz-eO-2yv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zQy-YA-iJK" firstAttribute="top" secondItem="2am-j8-gUP" secondAttribute="top" constant="60" id="hg0-LS-4Es"/>
+                            <constraint firstItem="zQy-YA-iJK" firstAttribute="top" secondItem="2am-j8-gUP" secondAttribute="top" constant="70" id="sYm-H3-gV5"/>
+                            <constraint firstItem="zQy-YA-iJK" firstAttribute="centerX" secondItem="YBN-2x-U0G" secondAttribute="centerX" id="vQH-h0-2ic"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2am-j8-gUP"/>
                     </view>
                     <connections>
@@ -125,19 +152,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gic-6O-VIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="-572"/>
+            <point key="canvasLocation" x="940" y="-572.56371814092961"/>
         </scene>
         <!--Ride On View Controller-->
         <scene sceneID="Yw0-ws-qHI">
             <objects>
                 <viewController storyboardIdentifier="rideon" id="r0u-Sl-Ydd" customClass="RideOnViewController" customModule="rejack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rFK-Zx-i70">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nex-Fn-u1y">
-                                <rect key="frame" x="39.5" y="479" width="296" height="98"/>
-                                <state key="normal" image="btn-scan-1"/>
+                                <rect key="frame" x="39.5" y="459" width="296" height="98"/>
+                                <state key="normal" image="btn-fin-1"/>
                                 <connections>
                                     <action selector="rideOffAC:" destination="r0u-Sl-Ydd" eventType="touchUpInside" id="6xb-Sk-xw7"/>
                                     <segue destination="xlr-bh-sDd" kind="show" id="Khb-6M-0RW"/>
@@ -169,20 +196,41 @@
             <objects>
                 <viewController id="xlr-bh-sDd" customClass="RideOffViewController" customModule="rejack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y0d-Lj-vOA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UY-hF-iXh">
-                                <rect key="frame" x="113.5" y="528" width="148" height="49"/>
-                                <state key="normal" image="btn-fin.png"/>
+                                <rect key="frame" x="39.5" y="459" width="296" height="98"/>
+                                <state key="normal" image="btn-lock-1"/>
                                 <connections>
                                     <action selector="rideOff" destination="xlr-bh-sDd" eventType="touchUpInside" id="bdL-5l-Ibp"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unlock" translatesAutoresizingMaskIntoConstraints="NO" id="GpP-KG-ljK">
+                                <rect key="frame" x="-75" y="162" width="524" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pp5-6n-HOs">
+                                <rect key="frame" x="34.5" y="80" width="306.5" height="22"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="サイクリングお疲れ様でした！">
+                                        <attributes>
+                                            <color key="NSColor" red="0.32549019610000002" green="0.76470588240000004" blue="0.74509803919999995" alpha="1" colorSpace="deviceRGB"/>
+                                            <font key="NSFont" size="22" name="HiraginoSans-W7"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="6UY-hF-iXh" firstAttribute="centerX" secondItem="Y0d-Lj-vOA" secondAttribute="centerX" id="VaY-SD-YBY"/>
+                            <constraint firstItem="pp5-6n-HOs" firstAttribute="top" secondItem="rSh-bf-7ob" secondAttribute="top" constant="80" id="e9u-gM-6OH"/>
                             <constraint firstItem="rSh-bf-7ob" firstAttribute="bottom" secondItem="6UY-hF-iXh" secondAttribute="bottom" constant="90" id="fcR-bB-pyY"/>
+                            <constraint firstItem="pp5-6n-HOs" firstAttribute="centerX" secondItem="Y0d-Lj-vOA" secondAttribute="centerX" id="fuh-jt-EcF"/>
                             <constraint firstItem="6UY-hF-iXh" firstAttribute="centerX" secondItem="Y0d-Lj-vOA" secondAttribute="centerX" id="qBO-ae-aFw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rSh-bf-7ob"/>
@@ -194,10 +242,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn-fin.png" width="148" height="49"/>
+        <image name="btn-destination-1" width="296" height="98"/>
+        <image name="btn-fin-1" width="296" height="98"/>
+        <image name="btn-lock-1" width="296" height="98"/>
         <image name="btn-scan" width="148" height="49"/>
         <image name="btn-scan-1" width="296" height="98"/>
-        <image name="unlock.png" width="262" height="218"/>
+        <image name="btn-search-1" width="40" height="40"/>
+        <image name="unlock" width="262" height="219"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eQk-Vm-up2"/>

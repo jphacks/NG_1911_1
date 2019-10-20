@@ -44,7 +44,7 @@ class SetNavigationViewController: UIViewController, UITextFieldDelegate {
     @IBAction func serchAC() {
         let destination = textView.text!
         let APIKEY = KeyManager().getValue(key: "apikey") as? String
-        let urlstr: String = "https://maps.google.com/maps/api/staticmap?center=名古屋大学&markers=color:blue%7C\(destination)&size=600x400&zoom=15&key=" + APIKEY!
+        let urlstr: String = "https://maps.google.com/maps/api/staticmap?center=\(String(destination))&markers=color:blue%7C\(destination)&size=600x400&zoom=15&key=" + APIKEY!
         let encodeUrlstr: String = urlstr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         let url = URL(string: encodeUrlstr)
         do {
