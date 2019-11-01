@@ -2,7 +2,7 @@
 //  HomePresenter.swift
 //  rejack
 //
-//  Created by 梶原大進 on 2019/10/19.
+//  Created by 梶原大進 on 2019/11/01.
 //  Copyright © 2019年 梶原大進. All rights reserved.
 //
 
@@ -18,10 +18,6 @@ class HomePresenter {
         self.apiModel = ApiModel()
         
         apiModel.delegate = self
-    }
-    
-    func test() {
-        apiModel.test()
     }
     
     func unlockKey() {

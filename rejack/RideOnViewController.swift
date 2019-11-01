@@ -22,7 +22,7 @@ class RideOnViewController: UIViewController, CLLocationManagerDelegate {
     var loc_counter: Int = 0
     
     var routes: [Route]?
-    var current_route_index = 0
+    var current_route_index = 1
     var needNavigation = false
     
     override func viewDidLoad() {
@@ -34,14 +34,14 @@ class RideOnViewController: UIViewController, CLLocationManagerDelegate {
             let utterance = AVSpeechUtterance(string: text)
             utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
             talker.speak(utterance)
-            sleep(3)
+            sleep(2)
             
             let first_navi = routes![0].instructions
             let talker2 = AVSpeechSynthesizer()
             let utterance2 = AVSpeechUtterance(string: first_navi)
             utterance2.voice = AVSpeechSynthesisVoice(language: "ja-JP")
             talker2.speak(utterance2)
-            sleep(3)
+            sleep(2)
         }
 
         if CLLocationManager.locationServicesEnabled() {
@@ -98,9 +98,8 @@ class RideOnViewController: UIViewController, CLLocationManagerDelegate {
         
         if needNavigation {
             if current_route_index < (routes?.count)! {
-                
-                if round(routes![current_route_index].lat*pow(10, 5)) ==  round(location.coordinate.latitude*pow(10, 5))
-                    && round(routes![current_route_index].lng*pow(10, 5)) == round(location.coordinate.latitude*pow(10, 5))
+                if round(routes![current_route_index].lat*pow(10, 3)) ==  round(location.coordinate.latitude*pow(10, 3))
+                    && round(routes![current_route_index].lng*pow(10, 3)) == round(location.coordinate.longitude*pow(10, 3))
                 {
                     self.locationMg.stopUpdatingHeading()
                     let text = routes![current_route_index].instructions
@@ -109,7 +108,7 @@ class RideOnViewController: UIViewController, CLLocationManagerDelegate {
                     utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
                     talker.speak(utterance)
                     current_route_index += 1
-                    sleep(3)
+                    sleep(2)
                 }
             }
         }
