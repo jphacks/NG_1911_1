@@ -98,11 +98,14 @@ class RideOnViewController: UIViewController, CLLocationManagerDelegate {
         
         if needNavigation {
             if current_route_index < (routes?.count)! {
-                if round(routes![current_route_index].lat*pow(10, 3)) ==  round(location.coordinate.latitude*pow(10, 3))
-                    && round(routes![current_route_index].lng*pow(10, 3)) == round(location.coordinate.longitude*pow(10, 3))
-                {
+                let fromLoc = CLLocation.init(latitude: routes![current_route_index].lat, longitude: routes![current_route_index].lng)
+                let distance = location.distance(from: fromLoc)
+                if distance == 10 {
+//                if round(routes![current_route_index].lat*pow(10, 3)) ==  round(location.coordinate.latitude*pow(10, 3))
+//                    && round(routes![current_route_index].lng*pow(10, 3)) == round(location.coordinate.longitude*pow(10, 3))
+//                {
                     self.locationMg.stopUpdatingHeading()
-                    let text = routes![current_route_index].instructions
+                    let text = "10メートル先　" + routes![current_route_index].instructions
                     let talker = AVSpeechSynthesizer()
                     let utterance = AVSpeechUtterance(string: text)
                     utterance.voice = AVSpeechSynthesisVoice(language: "ja-JP")
