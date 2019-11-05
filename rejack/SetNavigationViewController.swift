@@ -36,6 +36,10 @@ class SetNavigationViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textView.endEditing(true)
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -43,6 +47,9 @@ class SetNavigationViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func serchAC() {
         let destination = textView.text!
+        
+        textView.endEditing(true)
+        
         let APIKEY = KeyManager().getValue(key: "apikey") as? String
         let urlstr: String = "https://maps.google.com/maps/api/staticmap?center=\(String(destination))&markers=color:blue%7C\(destination)&size=600x400&zoom=15&key=" + APIKEY!
         let encodeUrlstr: String = urlstr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!

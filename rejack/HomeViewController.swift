@@ -104,8 +104,7 @@ class HomeViewController: UIViewController, NFCNDEFReaderSessionDelegate, CLLoca
     }
     
     @IBAction func readNFC(_ sender: UIButton) {
-        //self.unlockKey()
-        //self.toRideView()
+        self.toRideView() // 開発用
         guard NFCNDEFReaderSession.readingAvailable else {
             let alertController = UIAlertController(
                 title: "スキャンできません",
