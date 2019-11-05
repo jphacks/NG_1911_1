@@ -13,7 +13,9 @@ import AVFoundation
 
 class RideOnViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var rideOffBtn: UIButton!
-    @IBOutlet var warningImageView: UIImageView!
+    @IBOutlet var lockOnlyBtn: UIButton!
+    @IBOutlet var lockBtn: UIButton!
+    @IBOutlet var searchBtn: UIButton!
     
     var locationMg: CLLocationManager!
     
@@ -49,11 +51,18 @@ class RideOnViewController: UIViewController, CLLocationManagerDelegate {
             locationMg.delegate = self
             locationMg.startUpdatingLocation()
         }
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "running.png")!)
         
-        self.rideOffBtn.isEnabled = false
-        self.warningImageView.alpha = 0
+        searchBtn.isEnabled = false
+        rideOffBtn.isEnabled = false
+        rideOffBtn.alpha = 1
+        lockOnlyBtn.alpha = 0
+        lockBtn.alpha = 0
+        
+        locationMg.startUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -115,16 +124,39 @@ class RideOnViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func showButton() {
-        self.rideOffBtn.isEnabled = true
+        searchBtn.isEnabled = true
+        rideOffBtn.isEnabled = true
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "stop.png")!)
     }
     
     func hideButton() {
-        self.rideOffBtn.isEnabled = false
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "running.png")!)
+        searchBtn.isEnabled = false
+        rideOffBtn.isEnabled = false
+        rideOffBtn.alpha = 1
+        lockOnlyBtn.alpha = 0
+        lockBtn.alpha = 0
     }
     
     @IBAction func rideOffAC(_ sender: UIButton) {
+        rideOffBtn.alpha = 0
+        lockOnlyBtn.alpha = 1
+        lockBtn.alpha = 1
         doRide = false
+    }
+    
+    @IBAction func lockOnlyAC(_ sender: UIButton) {
+        //位置情報の更新を止める
         self.locationMg.stopUpdatingLocation()
     }
+    
+    @IBAction func lockAC(_ sender: UIButton) {
+        // 位置情報の更新を止める
+        self.locationMg.stopUpdatingLocation()
+    }
+    
+    @IBAction func searchAC(_ sender: UIButton) {
+        self.locationMg.stopUpdatingLocation()
+    }
+    
 }

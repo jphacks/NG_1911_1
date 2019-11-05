@@ -14,6 +14,7 @@
 		164A9265235AD3310002901E /* RideOnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A9264235AD3310002901E /* RideOnViewController.swift */; };
 		164A9267235AD33E0002901E /* RideOffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A9266235AD33E0002901E /* RideOffViewController.swift */; };
 		164A926F235AD5910002901E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164A926E235AD5910002901E /* HomeViewController.swift */; };
+		167330A4237184460027F06D /* StopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167330A3237184460027F06D /* StopViewController.swift */; };
 		16796D6D2358BB2000EAAFFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16796D6C2358BB2000EAAFFE /* AppDelegate.swift */; };
 		16796D722358BB2000EAAFFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16796D702358BB2000EAAFFE /* Main.storyboard */; };
 		16796D742358BB2100EAAFFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16796D732358BB2100EAAFFE /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		164A9264235AD3310002901E /* RideOnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideOnViewController.swift; sourceTree = "<group>"; };
 		164A9266235AD33E0002901E /* RideOffViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideOffViewController.swift; sourceTree = "<group>"; };
 		164A926E235AD5910002901E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		167330A3237184460027F06D /* StopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopViewController.swift; sourceTree = "<group>"; };
 		16796D692358BB2000EAAFFE /* rejack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rejack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16796D6C2358BB2000EAAFFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16796D712358BB2000EAAFFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				164A926E235AD5910002901E /* HomeViewController.swift */,
 				1690E3C0235BEBF9000BA76A /* SetNavigationViewController.swift */,
 				164A9264235AD3310002901E /* RideOnViewController.swift */,
+				167330A3237184460027F06D /* StopViewController.swift */,
 				164A9266235AD33E0002901E /* RideOffViewController.swift */,
 				16796D702358BB2000EAAFFE /* Main.storyboard */,
 				1612C330235C100A0047A03A /* running.png */,
@@ -439,6 +442,7 @@
 				1690E3A1235BD166000BA76A /* KeyManager.swift in Sources */,
 				164A9265235AD3310002901E /* RideOnViewController.swift in Sources */,
 				164A926F235AD5910002901E /* HomeViewController.swift in Sources */,
+				167330A4237184460027F06D /* StopViewController.swift in Sources */,
 				16796D6D2358BB2000EAAFFE /* AppDelegate.swift in Sources */,
 				1690E3C1235BEBF9000BA76A /* SetNavigationViewController.swift in Sources */,
 			);
