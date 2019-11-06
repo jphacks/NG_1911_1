@@ -49,7 +49,7 @@ class RideOnViewController: UIViewController, CLLocationManagerDelegate {
         if CLLocationManager.locationServicesEnabled() {
             locationMg = CLLocationManager()
             locationMg.delegate = self
-            locationMg.startUpdatingLocation()
+            //locationMg.startUpdatingLocation()
         }
     }
     

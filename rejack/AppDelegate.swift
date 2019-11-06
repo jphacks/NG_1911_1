@@ -15,7 +15,6 @@ import CoreLocation
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
     var isAgain: Bool = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -47,9 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if doRide {
             Alamofire.request(ApiUrl.shared.baseUrl + "/api/alert/start", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
-                guard let data = response.data else {
-                    return
-                }
+                guard let data = response.data else { return }
                 self.isAgain = true
                 print(data)
             }
@@ -59,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             content.body = "運転中にスマホいじったらあかんで！"
             content.sound = UNNotificationSound.default
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-            let request = UNNotificationRequest(identifier: "warningNotfication", content: content, trigger: trigger)
+            let request = UNNotificationRequest(identifier: "warningNotfication1", content: content, trigger: trigger)
             let center = UNUserNotificationCenter.current()
             center.add(request) { (error) in
                 if let error = error {

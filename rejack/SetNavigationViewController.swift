@@ -46,6 +46,10 @@ class SetNavigationViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    @IBAction func backAC(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func serchAC() {
         let destination = textView.text!
         
