@@ -52,7 +52,7 @@ class SetNavigationViewController: UIViewController, UITextFieldDelegate {
         textView.endEditing(true)
         
         let APIKEY = KeyManager().getValue(key: "apikey") as? String
-        let urlstr: String = "https://maps.google.com/maps/api/staticmap?center=\(String(destination))&markers=color:blue%7C\(destination)&size=600x400&zoom=15&key=" + APIKEY!
+        let urlstr: String = "https://maps.google.com/maps/api/staticmap?center=\(String(destination))&markers=size:mid|color:red|label:A|\(String(destination))&size=600x400&zoom=15&key=" + APIKEY!
         let encodeUrlstr: String = urlstr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         let url = URL(string: encodeUrlstr)
         do {
