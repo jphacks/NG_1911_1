@@ -15,6 +15,7 @@ class SetNavigationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var settingBtn: UIButton!
     @IBOutlet var destination: UIImageView!
     @IBOutlet var textView: UITextField!
+    @IBOutlet var destinationLabel: UILabel!
     
     var lat = 0.0
     var lon = 0.0
@@ -58,6 +59,7 @@ class SetNavigationViewController: UIViewController, UITextFieldDelegate {
             let data = try Data(contentsOf: url!)
             let image = UIImage(data: data)
             self.destination.image = image
+            self.destinationLabel.text = destination
         }catch let err {
             print("Error : \(err.localizedDescription)")
         }
