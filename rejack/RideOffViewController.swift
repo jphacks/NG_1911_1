@@ -17,13 +17,13 @@ class RideOffViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func rideOff() {
-        Alamofire.request(url + "/api/key/close", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
-            guard let data = response.data else {
-                return
-            }
-            print(data)
-        }
-    }
+//    @IBAction func rideOff() {
+//        Alamofire.request(url + "/api/key/close", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+//            guard let data = response.data else {
+//                return
+//            }
+//            print(data)
+//        }
+//    }
 
 }

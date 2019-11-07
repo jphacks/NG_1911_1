@@ -10,12 +10,15 @@ import UIKit
 import CoreMotion
 import CoreLocation
 import AVFoundation
+import Alamofire
 
 class RideOnViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var rideOffBtn: UIButton!
     @IBOutlet var lockOnlyBtn: UIButton!
     @IBOutlet var lockBtn: UIButton!
     @IBOutlet var searchBtn: UIButton!
+    
+    var url = ApiUrl.shared.baseUrl
     
     var locationMg: CLLocationManager!
     
@@ -87,6 +90,7 @@ class RideOnViewController: UIViewController, CLLocationManagerDelegate {
         print("pre_lat", pre_lat)
         print("pre_lon", pre_lon)
         
+        // hackdayは７でデモをした
         if round(lat*pow(10, 7)) == round(pre_lat*pow(10, 7))
             && round(lon*pow(10, 7)) == round(pre_lon*pow(10, 7)) {
             loc_counter += 1
@@ -138,6 +142,13 @@ class RideOnViewController: UIViewController, CLLocationManagerDelegate {
         lockBtn.alpha = 0
     }
     
+    func closeKey() {
+        Alamofire.request(url+"/key/close", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).response { response in
+            guard let data = response.data else { return }
+            print(data)
+        }
+    }
+    
     @IBAction func rideOffAC(_ sender: UIButton) {
         rideOffBtn.alpha = 0
         lockOnlyBtn.alpha = 1
@@ -146,13 +157,17 @@ class RideOnViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func lockOnlyAC(_ sender: UIButton) {
+        // 施錠だけ
         //位置情報の更新を止める
         self.locationMg.stopUpdatingLocation()
+        self.closeKey()
     }
     
     @IBAction func lockAC(_ sender: UIButton) {
+        // 施錠して終了
         // 位置情報の更新を止める
         self.locationMg.stopUpdatingLocation()
+        self.closeKey()
     }
     
     @IBAction func searchAC(_ sender: UIButton) {

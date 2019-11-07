@@ -272,6 +272,9 @@
 					16796D682358BB2000EAAFFE = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.NearFieldCommunicationTagReading = {
 								enabled = 1;
 							};
